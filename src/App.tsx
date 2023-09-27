@@ -1,15 +1,16 @@
 import { React, useState } from 'react'
 import './App.css'
 import useImg from "./assets/cover.png"
+import user from "./assets/ring-1.png"
 
 
 const cardImages = [
-  { "src": "/assets/helmet-1.png" },
-  { "src": "/assets/potion-1.png" },
-  { "src": "/assets/ring-1.png" },
-  { "src": "/assets/scroll-1.png" },
-  { "src": "/assets/shield-1.png" },
-  { "src": "/assets/sword-1.png" }
+  { "src": "./src/assets/helmet-1.png" },
+  { "src": "./src/assets/potion-1.png" },
+  { "src": "./src/assets/ring-1.png" },
+  { "src": "./src/assets/scroll-1.png" },
+  { "src": "./src/assets/shield-1.png" },
+  { "src": "./src/assets/sword-1.png" },
 ]
 
 function App() {
@@ -38,8 +39,10 @@ function App() {
       <div className="card-grid">
         {cards.map(card => (
           <div className='card' key={card.id}>
-            <img src={card.src} className='front' alt="card front" />
-            <img src={useImg} className='back' alt="card back" />
+            <div>
+              <img src={card.src} className='front' alt="card front" />
+              <img src={useImg} className='back' alt="card back" />
+            </div>            
           </div>
         ))}
       </div>
